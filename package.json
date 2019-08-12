@@ -1,16 +1,22 @@
 {
   "name": "totoro",
-  "version": "0.0.0",
   "private": true,
+  "version": "0.0.1",
+  "description": "totoro",
+  "license": "MIT",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
-    "start": "node ./bin/www"
+    "build": "stencil build",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watch"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "jade": "~1.11.0",
-    "morgan": "~1.9.1"
+    "@ionic/core": "^4.7.1"
+  },
+  "devDependencies": {
+    "@stencil/core": "^1.2.1"
   }
 }
